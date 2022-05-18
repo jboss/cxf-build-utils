@@ -17,16 +17,16 @@
   under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
+    <!--parent>
         <groupId>org.apache</groupId>
         <artifactId>apache</artifactId>
         <version>21</version>
-    </parent>
+    </parent-->
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apache.cxf.build-utils</groupId>
     <artifactId>cxf-build-utils</artifactId>
-    <version>3.4.4</version>
+    <version>3.4.4-jbossorg-1-SNAPSHOT</version>
     <name>Apache CXF Build Utilities</name>
     <url>https://cxf.apache.org</url>
     <packaging>pom</packaging>
@@ -38,6 +38,16 @@
     </modules>
 
     <distributionManagement>
+        <repository>
+            <id>jboss-releases-repository</id>
+            <name>JBoss Releases Repository</name>
+            <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>jboss-snapshots-repository</id>
+            <name>JBoss Snapshots Repository</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
         <site>
             <id>apache.cxf.site</id>
             <url>scpexe://people.apache.org/www/cxf.apache.org/cxf/mvn_site/build-utils</url>
@@ -45,10 +55,10 @@
     </distributionManagement>
     <inceptionYear>2006</inceptionYear>
     <scm>
-      <connection>scm:git:https://gitbox.apache.org/repos/asf/cxf-build-utils.git</connection>
-      <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/cxf-build-utils.git</developerConnection>
-      <tag>cxf-build-utils-3.4.4</tag>
-  </scm>
+        <connection>scm:git:https://github.com/jboss/cxf-build-utils.git</connection>
+        <developerConnection>scm:git:https://github.com/jboss/cxf-build-utils.git</developerConnection>
+        <tag>cxf-build-utils-3.4.4-jbossorg</tag>
+    </scm>
     <mailingLists>
         <mailingList>
             <name>Apache CXF User List</name>
